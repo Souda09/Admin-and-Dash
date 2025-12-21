@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+
+      <a class="navbar-brand" href="#">Navbar</a>
+
+      <div class="collapse navbar-collapse">
+
+        <!-- Center links -->
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Shop</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Users</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="addProduct.html">Add Product</a>
+          </li>
+        </ul>
+
+
+        <button id="logBtn" class="btn">
+          <i class="fa-solid fa-arrow-right-from-bracket"></i>
+        </button>
+
+      </div>
+    </div>
+  </nav>
+
+
+    <!--  Form add product -->
+
+    <div class="container mt-5">
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <div class="card shadow">
+            <div class="card-header bg-primary text-white">
+              <h4 class="mb-0">Add New Product</h4>
+            </div>
+            <div class="card-body">
+              <form id="pForm">
+
+                <!-- Product Name -->
+                <div class="mb-3">
+                  <label for="productName" class="form-label">Product Name</label>
+                  <input type="text" class="form-control" id="pname" name="name" placeholder="e.g. Wireless Headphones"
+                    required>
+                </div>
+
+                <div class="row">
+                  <!-- Category Selection -->
+                  <div class="col-md-6 mb-3">
+                    <label for="productCategory" class="form-label">Category</label>
+                    <input type="text" class="form-control" id="pcategory" name="price" placeholder="category" required>
+
+                  </div>
+
+                  <!-- Price -->
+                  <div class="col-md-6 mb-3">
+                    <label for="productPrice" class="form-label">Price ($)</label>
+                    <input type="number" class="form-control" id="pprice" name="price" step="0.01" placeholder="0.00"
+                      required>
+                  </div>
+                </div>
+
+                <!-- Description -->
+                <div class="mb-3">
+                  <label for="productDescription" class="form-label">Description</label>
+                  <textarea class="form-control" id="pdesc" name="description" rows="3"
+                    placeholder="Enter product details..."></textarea>
+                </div>
+
+                <div class=" mb-3">
+                  <label for="productPrice" class="form-label">Color</label>
+                  <!-- <input type="color" class="form-control" id="pcolor" name="price" step="0.01" placeholder="0.00" required> -->
+                  <button class="btn btn-primary" id="addColor">add color</button>
+                  <div id="colorGroup"></div>
+                </div>
+                <!-- Image Upload -->
+                <div class=" mb-3">
+                  <label for="productImage" class="form-label">Product Image</label>
+                  <input class="form-control" type="file" id="pimage" name="image" accept="image/*">
+                </div>
+
+
+                <!-- Submit Buttons -->
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                  <button type="reset" class="btn btn-secondary me-md-2">Clear</button>
+                  <button class="btn btn-primary">Add Product</button>
+                </div>
+
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="./dash.js" type="module"></script>
+    <script src="./auth.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"></script>
+
+</body>
+
+</html>
